@@ -1,4 +1,4 @@
-// // **
+// // **дз от Алексея
 // //  * Напиши функцию getAllPropValues(propName)
 // //  * которая вернет все значения заданного
 // //  * свойства
@@ -35,24 +35,58 @@
 // Ваша задача - вернуть массив, в котором будут идти сначала числа, отсортированные в порядке возрастания, а затем строки,
 // отсортированные в алфавитном порядке.Значения должны сохранить свой исходный тип.
 // Если на входе была строка, то и вернуться должна строка, если число - число.
-const example1 = [6, 2, 3, 4, 5];
-const example2 = [14, 32, 3, 5, 5];
-const example3 = [1, 2, 3, 4, 5];
-const example4 = ['Banana', 'Orange', 'Apple', 'Mango', 0, 7, 2];
+// const example1 = [6, 2, 3, 4, 5];
+// const example2 = [14, 32, 3, 5, 5];
+// const example3 = [1, 2, 3, 4, 5];
+// const example4 = ['Banana', 'Orange', 'Apple', 'Mango', 0, 7, 2];
+// //перебрать массив
+// // разбить на 2 массива числа и буквы
+// // отсортировать 2 массива
+// // распылить из в 1
+// const getAscending = example => {
+//   const letters = [];
+//   const numbers = [];
+//   example.forEach(item => {
+//     if (typeof item === 'string') {
+//       return letters.push(item);
+//     }
+//     numbers.push(item);
+//   });
 
-const getAscending = [...example4].sort((a, b) => a - b);
-console.log(getAscending);
+//   return [
+//     ...numbers.sort((a, b) => a - b),
+//     ...letters.sort((a, b) => a.localeCompare(b)),
+//   ];
+// };
+// console.log(getAscending(example4));
 
 // example([6, 2, 3, 4, 5]) = > [2, 3, 4, 5, 6]
 // example([14, 32, 3, 5, 5]) = > [3, 5, 5, 14, 32]
 // example([1, 2, 3, 4, 5]) = > [1, 2, 3, 4, 5]
 // example(['Banana', 'Orange', 'Apple', 'Mango', 0, 2, 2]) = > [0, 2, 2, 'Apple', 'Banana', 'Mango', 'Orange']
 
-// const data = {a: 1, b: {c: 1, d: 2}, f: {p: 5, q: 6}};
+// const data = { a: 1, b: { c: 1, d: 2 }, f: { p: 5, q: 6 } };
 // const data2 = {a: 1, b: {c: 1, d: 2}, f: {p: 5, q: 6}};
 // const data3 = {a: 1, b: {c: 2}, l: {m: 2}};
 // const data4 = {a: 1, b: 2, c: {d: 6, e: 8}};
 // const data5 = {a: 1, b: 2, c: {d: 6, e: 8}};
+// console.log(isEqual(data, data2)); // Выводит true
+// console.log(isEqual(data, data3)); // Выводит false
+// console.log(isEqual(data4, data5)); // Выводит true
+// перебрать первый объект
+// написать сравнение есть ли такие же ключи во втором объекте или нет
+
+// const data = { a: 1, b: { c: 1, d: 2 }, f: { p: 5, q: 6 } };
+// const data2 = { a: 1, b: { c: 1, d: 2 }, f: { p: 5, q: 6 } };
+// const data3 = { a: 1, b: { c: 2 }, l: { m: 2 } };
+// const data4 = { a: 1, b: 2, c: { d: 6, e: 8 } };
+// const data5 = { a: 1, b: 2, c: { d: 6, e: 8 } };
+// const isEqual = (firstObj, secObj) => {
+//   return Object.keys(firstObj).every(key => Object.keys(secObj).includes(key));
+// };
+// // function isEqual(obj1, obj2) {
+// //   return JSON.stringify(obj1) === JSON.stringify(obj2);
+// // }
 // console.log(isEqual(data, data2)); // Выводит true
 // console.log(isEqual(data, data3)); // Выводит false
 // console.log(isEqual(data4, data5)); // Выводит true
